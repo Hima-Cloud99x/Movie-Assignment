@@ -1,0 +1,228 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Movie Booking App</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f4;
+            margin: 0;
+            padding: 0;
+        }
+    
+        header {
+            background-color: #333;
+            color: #fff;
+            text-align: center;
+            padding: 10px;
+        }
+    
+        h1 {
+            margin: 0;
+        }
+    
+        .container {
+            max-width: 1200px;
+            margin: 20px auto;
+            padding: 20px;
+            background-color: #fff;
+            border-radius: 5px;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+            display: flex;
+            flex-wrap: wrap; 
+            justify-content: space-between; 
+        }
+    
+        .movie-card {
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            margin: 10px;
+            padding: 10px;
+            width: calc(20% - 20px); 
+            background-color: #fff;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+            transition: transform 0.3s; /* Add a smooth hover effect */
+        }
+    
+        .movie-card:hover {
+            transform: translateY(-5px); /* Move the card slightly up on hover */
+        }
+    
+        .movie-image {
+            width: 220px; 
+            height: 300px; 
+            object-fit: cover; /* Maintain aspect ratio  */
+            transition: opacity 0.3s; /* Add a smooth fade effect for the details */
+        }
+    
+        .movie-card:hover .movie-details {
+            opacity: 1; /* Make the details visible on hover */
+        }
+    
+        .movie-title {
+            font-size: 1.2rem;
+            font-weight: bold;
+            margin: 10px 0;
+        }
+    
+        .movie-description {
+            font-size: 0.9rem;
+            color: #888;
+            opacity: 0; /* Initially hide the details */
+            transition: opacity 0.3s; /* Add a smooth fade effect */
+        }
+    </style>
+    
+    
+</head>
+<body>
+    <header>
+        <h1>Movie Booking App</h1>
+    </header>
+    <div class="container">
+        <!-- Movie Cards -->
+        <div class="movie-card">
+            <a href="booking.html" target="_blank"> <!-- Add a hyperlink around the movie image -->
+                <img class="movie-image" src="movie1.jfif" alt="Movie 1">
+            </a>
+            <h2 class="movie-title">Movie 1</h2>
+            <p class="movie-description">Description of Movie 1.</p>
+        </div>
+        <div class="movie-card">
+          <a href="booking1.html" target="_blank">
+            <img class="movie-image" src="movie12.webp" alt="Movie 2">
+          </a>
+            <h2 class="movie-title">Movie 2</h2>
+            <p class="movie-description">Description of Movie 2.</p>
+        </div>
+        <div class="movie-card">
+          <a href="booking2.html" target="_blank">
+            <img class="movie-image" src="movie3.jfif" alt="Movie 2">
+          </a>
+            <h2 class="movie-title">Movie 2</h2>
+            <p class="movie-description">Description of Movie 2.</p>
+        </div>
+        <div class="movie-card">
+          <a href="booking3.html" target="_blank">
+            <img class="movie-image" src="movie10.webp" alt="Movie 2">
+          </a>
+            <h2 class="movie-title">Movie 2</h2>
+            <p class="movie-description">Description of Movie 2.</p>
+        </div>
+        <div class="movie-card">
+         <a href="booking4.html" target="_blank">
+            <img class="movie-image" src="movie5.avif" alt="Movie 2">
+         </a>
+            <h2 class="movie-title">Movie 2</h2>
+            <p class="movie-description">Description of Movie 2.</p>
+        </div>
+        <div class="movie-card">
+         <a href="booking5.html" target="_blank">
+            <img class="movie-image" src="movie6.jpg" alt="Movie 2">
+        </a>
+            <h2 class="movie-title">Movie 2</h2>
+            <p class="movie-description">Description of Movie 2.</p>
+        </div>
+        <div class="movie-card">
+         <a href="booking6.html" target="_blank">
+            <img class="movie-image" src="movie7.jpg" alt="Movie 2">
+         </a>
+            <h2 class="movie-title">Movie 2</h2>
+            <p class="movie-description">Description of Movie 2.</p>
+        </div>
+        <div class="movie-card">
+          <a href="booking7.html" target="_blank">
+            <img class="movie-image" src="movie8.jpg" alt="Movie 2">
+          </a>
+            <h2 class="movie-title">Movie 2</h2>
+            <p class="movie-description">Description of Movie 2.</p>
+        </div>
+        <div class="movie-card">
+          <a href="booking8.html" target="_blank">
+            <img class="movie-image" src="movie9.jfif" alt="Movie 2">
+          </a>
+            <h2 class="movie-title">Movie 2</h2>
+            <p class="movie-description">Description of Movie 2.</p>
+        </div>
+        <div class="movie-card">
+         <a href="booking9.html" target="_blank">
+            <img class="movie-image" src="movie4.jfif" alt="Movie 2">
+         </a>
+            <h2 class="movie-title">Movie 2</h2>
+            <p class="movie-description">Description of Movie 2.</p>
+        </div>
+        <div class="movie-card">
+          <a href="booking10.html" target="_blank">
+            <img class="movie-image" src="movie11.jfif" alt="Movie 2">
+            <h2 class="movie-title">Movie 2</h2>
+            <p class="movie-description">Description of Movie 2.</p>
+        </div>
+        <div class="movie-card">
+          <a href="booking11.html" target="_blank">
+            <img class="movie-image" src="movie2.jpeg" alt="Movie 2">
+          </a>
+            <h2 class="movie-title">Movie 2</h2>
+            <p class="movie-description">Description of Movie 2.</p>
+        </div>
+        <div class="movie-card">
+          <a href="booking12.html" target="_blank">
+          </a>
+            <img class="movie-image" src="movie13.jfif" alt="Movie 2">
+            <h2 class="movie-title">Movie 2</h2>
+            <p class="movie-description">Description of Movie 2.</p>
+        </div>
+        <div class="movie-card">
+          <a href="booking13.html" target="_blank">
+            <img class="movie-image" src="movie14.jfif" alt="Movie 2">
+          </a>
+            <h2 class="movie-title">Movie 2</h2>
+            <p class="movie-description">Description of Movie 2.</p>
+        </div>
+        <div class="movie-card">
+         <a href="booking14.html" target="_blank">
+            <img class="movie-image" src="movie15.jfif" alt="Movie 2">
+         </a>
+            <h2 class="movie-title">Movie 2</h2>
+            <p class="movie-description">Description of Movie 2.</p>
+        </div>
+        <div class="movie-card">
+          <a href="booking15.html" target="_blank">
+            <img class="movie-image" src="movie16.jfif" alt="Movie 2">
+          </a>
+            <h2 class="movie-title">Movie 2</h2>
+            <p class="movie-description">Description of Movie 2.</p>
+        </div>
+        <div class="movie-card">
+          <a href="booking16.html" target="_blank">
+            <img class="movie-image" src="movie17.webp" alt="Movie 2">
+          </a>
+            <h2 class="movie-title">Movie 2</h2>
+            <p class="movie-description">Description of Movie 2.</p>
+        </div>
+        <div class="movie-card">
+            <a href="booking17.html" target="_blank">
+            <img class="movie-image" src="movie18.avif" alt="Movie 2">
+            </a>
+            <h2 class="movie-title">Movie 2</h2>
+            <p class="movie-description">Description of Movie 2.</p>
+        </div>
+        <div class="movie-card">
+          <a href="booking18.html" target="_blank">
+            <img class="movie-image" src="movie19.jfif" alt="Movie 2">
+          </a>
+            <h2 class="movie-title">Movie 2</h2>
+            <p class="movie-description">Description of Movie 2.</p>
+        </div>
+        <div class="movie-card">
+            <a href="booking19.html" target="_blank">
+            <img class="movie-image" src="movie20.jfif" alt="Movie 2">
+            </a>
+            <h2 class="movie-title">Movie 2</h2>
+            <p class="movie-description">Description of Movie 2.</p>
+        </div>
+        
+    </div>
+</body>
+</html>

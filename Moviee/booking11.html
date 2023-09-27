@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Seat Booking</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f4;
+            margin: 0;
+            padding: 0;
+        }
+
+        h1 {
+            text-align: center;
+            margin-top: 20px;
+            color: #333;
+        }
+
+        .container {
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 20px;
+            background-color: #fff;
+            border-radius: 5px;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+        }
+
+        .seat {
+            width: 50px;
+            height: 50px;
+            margin: 10px;
+            background-color: #3498db; /* Blue color for unselected seats */
+            display: inline-block;
+            cursor: pointer;
+            text-align: center;
+            line-height: 50px;
+            font-weight: bold;
+            color: #fff;
+        }
+
+        .selected {
+            background-color: #e74c3c; /* Red color for selected seats */
+        }
+
+        p {
+            text-align: center;
+            font-size: 1.2rem;
+            margin: 20px 0;
+            color: #333;
+        }
+
+        #selected-seat {
+            font-weight: bold;
+            color: #e74c3c; /* Red color for selected seat */
+        }
+
+        .checkout-button {
+            display: block;
+            margin: 20px auto;
+            padding: 10px 20px;
+            background-color: #e74c3c; /* Red color for button */
+            color: #fff;
+            text-align: center;
+            font-weight: bold;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+
+        .checkout-button:hover {
+            background-color: #c0392b; /* Darker red color on hover */
+        }
+    </style>
+</head>
+<body>
+    <h1>Seat Booking</h1>
+    <div class="container">
+        <!-- 20 Seats -->
+        <div class="seat" data-seat-number="1" onclick="toggleSeat(this)">1</div>
+        <div class="seat" data-seat-number="2" onclick="toggleSeat(this)">2</div>
+        <div class="seat" data-seat-number="3" onclick="toggleSeat(this)">3</div>
+        <div class="seat" data-seat-number="4" onclick="toggleSeat(this)">4</div>
+        <div class="seat" data-seat-number="5" onclick="toggleSeat(this)">5</div>
+        <div class="seat" data-seat-number="6" onclick="toggleSeat(this)">6</div>
+        <div class="seat" data-seat-number="7" onclick="toggleSeat(this)">7</div>
+        <div class="seat" data-seat-number="8" onclick="toggleSeat(this)">8</div>
+        <div class="seat" data-seat-number="9" onclick="toggleSeat(this)">9</div>
+        <div class="seat" data-seat-number="10" onclick="toggleSeat(this)">10</div>
+        <div class="seat" data-seat-number="11" onclick="toggleSeat(this)">11</div>
+        <div class="seat" data-seat-number="12" onclick="toggleSeat(this)">12</div>
+        <div class="seat" data-seat-number="13" onclick="toggleSeat(this)">13</div>
+        <div class="seat" data-seat-number="14" onclick="toggleSeat(this)">14</div>
+        <div class="seat" data-seat-number="15" onclick="toggleSeat(this)">15</div>
+        <div class="seat" data-seat-number="16" onclick="toggleSeat(this)">16</div>
+        <div class="seat" data-seat-number="17" onclick="toggleSeat(this)">17</div>
+        <div class="seat" data-seat-number="18" onclick="toggleSeat(this)">18</div>
+        <div class="seat" data-seat-number="19" onclick="toggleSeat(this)">19</div>
+        <div class="seat" data-seat-number="20" onclick="toggleSeat(this)">20</div>
+     
+    </div>
+    <p>Selected Seat: <span id="selected-seat">None</span></p>
+    <button class="checkout-button" onclick="checkout()">Proceed to Checkout</button>
+    <script>
+        let selectedSeats = [];
+
+        function toggleSeat(seat) {
+            if (selectedSeats.length === 5) {
+                alert("You have selected 5 seats. Proceeding to checkout.");
+                checkout();
+            } else {
+                if (seat.classList.contains("selected")) {
+                    seat.classList.remove("selected");
+                    removeFromSelectedSeats(seat.getAttribute("data-seat-number"));
+                } else {
+                    seat.classList.add("selected");
+                    addToSelectedSeats(seat.getAttribute("data-seat-number"));
+                }
+
+                updateSelectedSeatDisplay();
+            }
+        }
+
+        function addToSelectedSeats(seatNumber) {
+            selectedSeats.push(seatNumber);
+        }
+
+        function removeFromSelectedSeats(seatNumber) {
+            const index = selectedSeats.indexOf(seatNumber);
+            if (index !== -1) {
+                selectedSeats.splice(index, 1);
+            }
+        }
+
+        function updateSelectedSeatDisplay() {
+            const selectedSeatElement = document.getElementById("selected-seat");
+            selectedSeatElement.textContent = selectedSeats.join(', ');
+        }
+
+        function checkout() {
+             if (!selectedSeat) {
+                alert("Please select a seat before proceeding to checkout.");
+             } else {
+        // Redirect to the seat details page with the selected seat number as a query parameter
+                 const selectedSeatNumber = selectedSeat.getAttribute("data-seat-number");
+                const seatDetailsUrl = `seat-details.html?seat=${selectedSeatNumber}`;
+                window.location.href = seatDetailsUrl;
+    }
+}
+
+
+        function checkout() {
+            if (selectedSeats.length === 0) {
+                alert("Please select at least one seat before proceeding to checkout.");
+            } else {
+                // Redirect to the seat details page with the selected seat numbers
+                window.location.href = `seat-details.html?seats=${selectedSeats.join(',')}`;
+            }
+        }
+    </script>
+</body>
+</html>
